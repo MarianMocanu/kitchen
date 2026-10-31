@@ -1,7 +1,10 @@
 import express from 'express';
+import morgan from 'morgan';
 
 const app = express();
 const port = Number(process.env.PORT);
+
+app.use(morgan('dev'));
 
 app.get('/health', (req, res) => {
     res.json({ status: 'ok' });

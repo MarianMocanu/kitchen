@@ -1,0 +1,16 @@
+# Dev Container / IDE only (Cursor server needs glibc).
+# Do NOT use this image for deploy — production/runtime stays on Dockerfile (Alpine).
+FROM node:24.16.0-bookworm
+
+WORKDIR /app
+
+# No package-lock.json — same as runtime Dockerfile (resolve from package.json).
+COPY package.json ./
+RUN npm install
+
+COPY src ./src
+COPY tests ./tests
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]

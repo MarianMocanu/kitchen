@@ -8,6 +8,7 @@ pnpm-debug.log*
 
 .git
 .gitignore
+.devcontainer
 
 .env
 .env.*
