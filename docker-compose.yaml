@@ -2,7 +2,7 @@ services:
   api:
     build: .
     environment:
-      PORT: ${PORT:?}
+      PORT: ${PORT:-3000}
     depends_on:
       - postgres
 

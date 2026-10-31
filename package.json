@@ -1,11 +1,12 @@
 {
-  "name": "kitchen-api",
+  "name": "kitchen",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start": "tsx src/index.ts",
     "dev": "tsx watch src/index.ts",
-    "deps": "docker run --rm -v \"$PWD\":/app -w /app node:24.16.0-alpine npm install",
+    "deps": "docker run --rm -v \"$PWD\":/app -v /app/node_modules -w /app node:24.16.0-alpine npm install",
+    "deps:add": "docker run --rm -v \"$PWD\":/app -v /app/node_modules -w /app node:24.16.0-alpine npm install",
     "test": "vitest run",
     "test:watch": "vitest --watch"
   },

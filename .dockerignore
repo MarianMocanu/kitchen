@@ -1,4 +1,20 @@
+# Never copy host dependencies into the build context
 node_modules
-npm-debug.log
+**/node_modules
+
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
 .git
+.gitignore
+
 .env
+.env.*
+
+docker-compose*.yaml
+README.md
+LICENSE
+coverage
+dist
+*.md

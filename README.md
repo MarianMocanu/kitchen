@@ -1,4 +1,4 @@
-# kitchen-api
+# kitchen
 
 Express + TypeScript API for FoodLens: upload a meal photo, identify foods, compute nutrition from Postgres, return an editable meal.
 
@@ -38,8 +38,8 @@ You do not need a local Postgres or a global Node install to run the API.
 ## Bootstrap after cloning
 
 ```bash
-git clone <repo-url> kitchen-api
-cd kitchen-api
+git clone <repo-url> kitchen
+cd kitchen
 ```
 
 ### 1. Local Compose override
@@ -99,7 +99,7 @@ docker compose logs -f test
 ## Layout
 
 ```
-kitchen-api/
+kitchen/
   Dockerfile
   docker-compose.yaml                 # prod-leaning base (no host ports)
   docker-compose.override.example.yaml

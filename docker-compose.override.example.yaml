@@ -7,13 +7,14 @@ services:
       watch:
         - action: rebuild
           path: Dockerfile
+
         - action: rebuild
           path: package.json
-        - action: rebuild
-          path: package-lock.json
+
         - action: sync
           path: ./src
           target: /app/src
+
         - action: sync
           path: ./tests
           target: /app/tests
@@ -29,9 +30,6 @@ services:
 
         - action: rebuild
           path: package.json
-
-        - action: rebuild
-          path: package-lock.json
 
         - action: sync
           path: ./src
